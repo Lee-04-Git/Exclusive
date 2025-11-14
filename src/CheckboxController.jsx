@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Checkbox from './Checkbox';
-import classnames from 'classnames';
+import Checkbox from './Checkbox.jsx';
 
 export default class CheckboxController extends Component {
 	constructor(props) {
@@ -48,15 +47,15 @@ export default class CheckboxController extends Component {
 	}
 
 	render() {
-		return(
+		return (
 			<div className="boxes">
-				<div className="box left" style={{display: "inline-block"}}>
-	  				<Checkbox idName = "yesBox" boxText="Yes!" clickHandler={this.yesBoxClickHandler} selected={this.state.yesChecked}/>
-	  			</div>
-	  			<div className="box right" style={{display: "inline-block"}}>
-	  				<Checkbox idName = "noBox" boxText="No Way!" clickHandler={this.noBoxClickHandler} selected={this.state.noChecked}/>
-	  			</div>
-	      	</div>
-      	);
+				<div className="box">
+					<Checkbox idName="yesBox" boxText="Yes!" clickHandler={this.yesBoxClickHandler} selected={this.state.yesChecked} />
+				</div>
+				<div className="box">
+					<Checkbox idName="noBox" boxText="No Way!" clickHandler={this.noBoxClickHandler} selected={this.state.noChecked} />
+				</div>
+			</div>
+		);
 	}
 }
